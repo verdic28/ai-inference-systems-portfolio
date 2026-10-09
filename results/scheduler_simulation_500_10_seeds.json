@@ -1,0 +1,179 @@
+{
+  "experiment_type": "deterministic_scheduler_simulation_not_hardware_benchmark",
+  "workload": {
+    "requests_per_seed": 500,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "arrival_gap_ms": 3,
+    "max_batch_size": 8,
+    "max_wait_ms": 4,
+    "base_service_ms": 2,
+    "per_token_ms": 0.08,
+    "note": "Results depend on the simulator's illustrative service-time model and should not be interpreted as real GPU or LLM serving performance."
+  },
+  "aggregation": "Arithmetic mean of reported per-seed metric values, each of which is rounded to three decimal places by the simulator.",
+  "mean_metrics": {
+    "fifo": {
+      "simulated_throughput_requests_per_second": 168.501,
+      "mean_modeled_latency_ms": 744.554,
+      "mean_queue_ms": 738.617,
+      "p95_queue_ms": 1397.134,
+      "batches": 500
+    },
+    "micro_batching": {
+      "simulated_throughput_requests_per_second": 280.127,
+      "mean_modeled_latency_ms": 157.866,
+      "mean_queue_ms": 148.422,
+      "p95_queue_ms": 279.28,
+      "mean_batches": 212.7
+    },
+    "relative_change_micro_batching_vs_fifo": {
+      "simulated_throughput_increase_percent": 66.2,
+      "mean_modeled_latency_reduction_percent": 78.8,
+      "mean_queue_time_reduction_percent": 79.9,
+      "p95_queue_time_reduction_percent": 80
+    }
+  },
+  "per_seed_results": [
+    {
+      "seed": 0,
+      "fifo_rps": 166.462,
+      "micro_batching_rps": 273.874,
+      "fifo_mean_latency_ms": 723.98,
+      "micro_batching_mean_latency_ms": 138.796,
+      "fifo_mean_queue_ms": 717.973,
+      "micro_batching_mean_queue_ms": 129.255,
+      "fifo_p95_queue_ms": 1320.232,
+      "micro_batching_p95_queue_ms": 240.179,
+      "fifo_batches": 500,
+      "micro_batching_batches": 217
+    },
+    {
+      "seed": 1,
+      "fifo_rps": 165.598,
+      "micro_batching_rps": 278.671,
+      "fifo_mean_latency_ms": 799.152,
+      "micro_batching_mean_latency_ms": 195.982,
+      "fifo_mean_queue_ms": 793.114,
+      "micro_batching_mean_queue_ms": 186.401,
+      "fifo_p95_queue_ms": 1511.723,
+      "micro_batching_p95_queue_ms": 355.939,
+      "fifo_batches": 500,
+      "micro_batching_batches": 204
+    },
+    {
+      "seed": 2,
+      "fifo_rps": 171.977,
+      "micro_batching_rps": 280.142,
+      "fifo_mean_latency_ms": 692.646,
+      "micro_batching_mean_latency_ms": 140.568,
+      "fifo_mean_queue_ms": 686.831,
+      "micro_batching_mean_queue_ms": 131.709,
+      "fifo_p95_queue_ms": 1357.109,
+      "micro_batching_p95_queue_ms": 284.797,
+      "fifo_batches": 500,
+      "micro_batching_batches": 225
+    },
+    {
+      "seed": 3,
+      "fifo_rps": 169.299,
+      "micro_batching_rps": 274.755,
+      "fifo_mean_latency_ms": 688.232,
+      "micro_batching_mean_latency_ms": 127.317,
+      "fifo_mean_queue_ms": 682.325,
+      "micro_batching_mean_queue_ms": 118.125,
+      "fifo_p95_queue_ms": 1273.929,
+      "micro_batching_p95_queue_ms": 203.01,
+      "fifo_batches": 500,
+      "micro_batching_batches": 226
+    },
+    {
+      "seed": 4,
+      "fifo_rps": 164.738,
+      "micro_batching_rps": 271.154,
+      "fifo_mean_latency_ms": 739.775,
+      "micro_batching_mean_latency_ms": 137.83,
+      "fifo_mean_queue_ms": 733.707,
+      "micro_batching_mean_queue_ms": 128.212,
+      "fifo_p95_queue_ms": 1380.895,
+      "micro_batching_p95_queue_ms": 249.756,
+      "fifo_batches": 500,
+      "micro_batching_batches": 220
+    },
+    {
+      "seed": 5,
+      "fifo_rps": 166.662,
+      "micro_batching_rps": 276.903,
+      "fifo_mean_latency_ms": 754.518,
+      "micro_batching_mean_latency_ms": 172.87,
+      "fifo_mean_queue_ms": 748.517,
+      "micro_batching_mean_queue_ms": 162.989,
+      "fifo_p95_queue_ms": 1442.487,
+      "micro_batching_p95_queue_ms": 316.398,
+      "fifo_batches": 500,
+      "micro_batching_batches": 205
+    },
+    {
+      "seed": 6,
+      "fifo_rps": 168.787,
+      "micro_batching_rps": 281.768,
+      "fifo_mean_latency_ms": 790.985,
+      "micro_batching_mean_latency_ms": 188.529,
+      "fifo_mean_queue_ms": 785.06,
+      "micro_batching_mean_queue_ms": 179.185,
+      "fifo_p95_queue_ms": 1407.52,
+      "micro_batching_p95_queue_ms": 277.157,
+      "fifo_batches": 500,
+      "micro_batching_batches": 211
+    },
+    {
+      "seed": 7,
+      "fifo_rps": 170.532,
+      "micro_batching_rps": 287.752,
+      "fifo_mean_latency_ms": 713.802,
+      "micro_batching_mean_latency_ms": 121.948,
+      "fifo_mean_queue_ms": 707.938,
+      "micro_batching_mean_queue_ms": 112.214,
+      "fifo_p95_queue_ms": 1365.742,
+      "micro_batching_p95_queue_ms": 237.93,
+      "fifo_batches": 500,
+      "micro_batching_batches": 204
+    },
+    {
+      "seed": 8,
+      "fifo_rps": 175.488,
+      "micro_batching_rps": 294.536,
+      "fifo_mean_latency_ms": 711.843,
+      "micro_batching_mean_latency_ms": 137.863,
+      "fifo_mean_queue_ms": 706.144,
+      "micro_batching_mean_queue_ms": 129.088,
+      "fifo_p95_queue_ms": 1323.747,
+      "micro_batching_p95_queue_ms": 218.814,
+      "fifo_batches": 500,
+      "micro_batching_batches": 213
+    },
+    {
+      "seed": 9,
+      "fifo_rps": 165.464,
+      "micro_batching_rps": 281.712,
+      "fifo_mean_latency_ms": 830.604,
+      "micro_batching_mean_latency_ms": 216.961,
+      "fifo_mean_queue_ms": 824.563,
+      "micro_batching_mean_queue_ms": 207.041,
+      "fifo_p95_queue_ms": 1587.953,
+      "micro_batching_p95_queue_ms": 408.823,
+      "fifo_batches": 500,
+      "micro_batching_batches": 202
+    }
+  ]
+}
