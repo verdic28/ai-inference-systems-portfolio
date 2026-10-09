@@ -22,3 +22,19 @@ Simulator outputs can compare algorithm behavior under the same generated worklo
 - Run repeated trials with different seeds.
 - State whether results are simulated, synthetic, or collected from a real endpoint.
 - Report hardware/software versions and any failures.
+
+
+## Published repeated-seed scheduler run
+
+The checked-in artifact [`results/scheduler_simulation_500_10_seeds.json`](../results/scheduler_simulation_500_10_seeds.json) records 10 seeded simulations of 500 requests each (seeds 0–9), with an 8-request batch cap and 4 ms collection window.
+
+Across those seeds, the simulator's arithmetic mean was:
+
+| Metric | FIFO | Micro-batching |
+|---|---:|---:|
+| Simulated requests/s | 168.501 | 280.127 |
+| Mean modeled latency (ms) | 744.554 | 157.866 |
+| Mean queue time (ms) | 738.617 | 148.422 |
+| p95 queue time (ms) | 1397.134 | 279.280 |
+
+These results describe only the simulator's workload and service-time assumptions. They are not measurements of a real GPU, model server, tokens/s, or production latency. The inference benchmark's synthetic mode is a harness smoke test, not model inference.
