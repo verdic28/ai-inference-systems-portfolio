@@ -28,20 +28,24 @@
       "mean_modeled_latency_ms": 744.554,
       "mean_queue_ms": 738.617,
       "p95_queue_ms": 1397.134,
-      "batches": 500
+      "batches": 500,
+      "mean_makespan_ms": 2971.277
     },
     "micro_batching": {
       "simulated_throughput_requests_per_second": 280.127,
       "mean_modeled_latency_ms": 157.866,
       "mean_queue_ms": 148.422,
       "p95_queue_ms": 279.28,
-      "mean_batches": 212.7
+      "mean_batches": 212.7,
+      "mean_makespan_ms": 1788.721
     },
     "relative_change_micro_batching_vs_fifo": {
       "simulated_throughput_increase_percent": 66.2,
       "mean_modeled_latency_reduction_percent": 78.8,
       "mean_queue_time_reduction_percent": 79.9,
-      "p95_queue_time_reduction_percent": 80
+      "p95_queue_time_reduction_percent": 80,
+      "mean_makespan_reduction_percent": 39.8,
+      "mean_batches_reduction_percent": 57.5
     }
   },
   "per_seed_results": [
@@ -56,7 +60,9 @@
       "fifo_p95_queue_ms": 1320.232,
       "micro_batching_p95_queue_ms": 240.179,
       "fifo_batches": 500,
-      "micro_batching_batches": 217
+      "micro_batching_batches": 217,
+      "fifo_makespan_ms": 3009.262,
+      "micro_batching_makespan_ms": 1831.242
     },
     {
       "seed": 1,
@@ -69,7 +75,9 @@
       "fifo_p95_queue_ms": 1511.723,
       "micro_batching_p95_queue_ms": 355.939,
       "fifo_batches": 500,
-      "micro_batching_batches": 204
+      "micro_batching_batches": 204,
+      "fifo_makespan_ms": 3019.793,
+      "micro_batching_makespan_ms": 1794.666
     },
     {
       "seed": 2,
@@ -82,7 +90,9 @@
       "fifo_p95_queue_ms": 1357.109,
       "micro_batching_p95_queue_ms": 284.797,
       "fifo_batches": 500,
-      "micro_batching_batches": 225
+      "micro_batching_batches": 225,
+      "fifo_makespan_ms": 2916.733,
+      "micro_batching_makespan_ms": 1794.184
     },
     {
       "seed": 3,
@@ -95,7 +105,9 @@
       "fifo_p95_queue_ms": 1273.929,
       "micro_batching_p95_queue_ms": 203.01,
       "fifo_batches": 500,
-      "micro_batching_batches": 226
+      "micro_batching_batches": 226,
+      "fifo_makespan_ms": 2954.175,
+      "micro_batching_makespan_ms": 1820.618
     },
     {
       "seed": 4,
@@ -108,7 +120,9 @@
       "fifo_p95_queue_ms": 1380.895,
       "micro_batching_p95_queue_ms": 249.756,
       "fifo_batches": 500,
-      "micro_batching_batches": 220
+      "micro_batching_batches": 220,
+      "fifo_makespan_ms": 3035.934,
+      "micro_batching_makespan_ms": 1844.779
     },
     {
       "seed": 5,
@@ -121,7 +135,9 @@
       "fifo_p95_queue_ms": 1442.487,
       "micro_batching_p95_queue_ms": 316.398,
       "fifo_batches": 500,
-      "micro_batching_batches": 205
+      "micro_batching_batches": 205,
+      "fifo_makespan_ms": 3003.006,
+      "micro_batching_makespan_ms": 1808.613
     },
     {
       "seed": 6,
@@ -134,7 +150,9 @@
       "fifo_p95_queue_ms": 1407.52,
       "micro_batching_p95_queue_ms": 277.157,
       "fifo_batches": 500,
-      "micro_batching_batches": 211
+      "micro_batching_batches": 211,
+      "fifo_makespan_ms": 2967.05,
+      "micro_batching_makespan_ms": 1779.237
     },
     {
       "seed": 7,
@@ -147,7 +165,9 @@
       "fifo_p95_queue_ms": 1365.742,
       "micro_batching_p95_queue_ms": 237.93,
       "fifo_batches": 500,
-      "micro_batching_batches": 204
+      "micro_batching_batches": 204,
+      "fifo_makespan_ms": 2933.174,
+      "micro_batching_makespan_ms": 1738.782
     },
     {
       "seed": 8,
@@ -160,7 +180,9 @@
       "fifo_p95_queue_ms": 1323.747,
       "micro_batching_p95_queue_ms": 218.814,
       "fifo_batches": 500,
-      "micro_batching_batches": 213
+      "micro_batching_batches": 213,
+      "fifo_makespan_ms": 2849.971,
+      "micro_batching_makespan_ms": 1698.358
     },
     {
       "seed": 9,
@@ -173,7 +195,9 @@
       "fifo_p95_queue_ms": 1587.953,
       "micro_batching_p95_queue_ms": 408.823,
       "fifo_batches": 500,
-      "micro_batching_batches": 202
+      "micro_batching_batches": 202,
+      "fifo_makespan_ms": 3023.668,
+      "micro_batching_makespan_ms": 1776.727
     }
   ]
 }
