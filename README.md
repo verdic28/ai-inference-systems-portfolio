@@ -1,22 +1,34 @@
 # AI Inference Systems Portfolio
 
-Engineering portfolio focused on inference benchmarking, scheduling experiments, and reproducible systems tooling.
+A small engineering portfolio focused on inference measurement, scheduling experiments, and reproducible systems tooling.
 
 ## Projects
 
-- **Inference benchmark suite** — a request-latency/throughput harness with a clearly labelled synthetic mode. Synthetic results are not real LLM or GPU performance claims.
-- **KODIE scheduler simulation** — a small scheduling simulator and benchmark for exploring workload policies. Simulation results are not hardware speedups.
-- **Open-source contribution kit** — repository checks and a practical contribution checklist.
+- **Inference Bench Lab** — Python CLI measuring client-observed latency, p50/p95, throughput, and failures for synthetic workloads or an OpenAI-compatible chat-completions endpoint.
+- **KODIE Scheduler Lab** — deterministic simulation comparing FIFO scheduling with a simple micro-batching policy; exports summary JSON and per-request CSV.
+- **Open-source Contribution Engineering Kit** — repository hygiene checker, issue template, and a checklist for making upstream contributions reproducible.
 
-## Run tests
+## Quick start
+
+Requires Python 3.10+; the synthetic benchmark and scheduler simulation use the standard library.
 
 ```bash
-python -m pip install pytest
-python -m pytest -q
+python -m unittest discover -s tests -v
+python projects/inference_bench/bench.py --mode synthetic --requests 100 --concurrency 4 --seed 7
+python projects/kodie_scheduler/benchmark.py --requests 500 --seed 7 --out results/kodie
+python projects/oss_contribution_kit/check_repo.py .
 ```
 
-See [`docs/PORTFOLIO_GUIDE.md`](docs/PORTFOLIO_GUIDE.md) and [`docs/BENCHMARK_METHODOLOGY.md`](docs/BENCHMARK_METHODOLOGY.md) for scope, setup, and benchmark interpretation.
+## Documentation
 
-## Important limitations
+- [Portfolio guide](docs/PORTFOLIO_GUIDE.md)
+- [Benchmark methodology and limitations](docs/BENCHMARK_METHODOLOGY.md)
+- [Inference Bench Lab](projects/inference_bench/README.md)
+- [KODIE Scheduler Lab](projects/kodie_scheduler/README.md)
+- [Open-source contribution kit](projects/oss_contribution_kit/README.md)
 
-The included benchmarks are synthetic or simulated unless explicitly stated otherwise. No real GPU acceleration, production inference performance, or upstream open-source contribution is claimed by this repository.
+## Honest interpretation of results
+
+The synthetic inference mode does **not** run a language model. KODIE is a discrete-work simulation, not a GPU benchmark. Neither should be presented as measured GPU speedups or production tokens/second. Real endpoint results must include the model/server/hardware configuration and be reproducible. The contribution kit is not itself an upstream contribution; only claim upstream work after a real PR exists.
+
+GitHub Actions runs the unit tests and smoke checks on pushes and pull requests.
